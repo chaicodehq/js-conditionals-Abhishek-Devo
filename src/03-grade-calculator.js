@@ -26,4 +26,38 @@
  */
 export function calculateGrade(score, hasExtraCredit) {
   // Your code here
+  let grade;
+
+  if(score>=0 && score <101){
+
+      if(hasExtraCredit) {
+        score+=5
+      }
+      
+
+      // agar koi score 100 se jada jaye toh
+      if(score>100){
+        score=100
+      }
+
+      //bas ab grade de rah hu
+      if(0<=score && score<=59){
+        grade="F"
+      } else if(60<=score && score<=69){
+        grade="D"
+      } else if(70<=score && score<=79){
+        grade="C"
+      } else if(80<=score && score<=89){
+        grade="B"
+       }
+       //else if( 90<=score && score<=100){
+      //   grade="A"
+      // }
+      else {
+        grade="A"
+      }
+      return grade
+  } else {
+    return "INVALID"
+  }
 }
